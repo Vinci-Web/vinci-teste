@@ -7,21 +7,160 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tests</title>
     <style>
-        body {
+        /* body {
             text-align: center;
             font-family: arial;
             display: grid;
             grid-gap: 20px;
             font-size: 20px;
+        }  */
+
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .box {
+            background-color: #fff;
+            box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 30px;
+            max-width: 1000px;
+            margin: 70px;
+        }
+
+        body {
+            background-color: #f38233;
+            justify-content: center;
+            display: flex;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
+        body {
+            padding-top: 20px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .grid {
+            display: flex;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 20px;
+
+
+        }
+
+        .grid>article {
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 6px 0px rgba(187, 163, 206, 1);
+            background-color: #fff;
+            padding: 5% 0;
+            border-radius: 20px;
+            width: 250px;
+        }
+
+
+        .grid .text {
+            padding: 10px 20px 20px 30px;
+            color: #808285;
+            margin-bottom: 20px;
+        }
+
+        .grid .btn {
+            margin-top: 20px;
+            background-color: #e0d4e9;
+            border: 0;
+            border-radius: 5px;
+            color: #000;
+            font-size: 15px;
+            padding: 5px 10px 5px 10px;
+            line-height: 5;
+            font-family: 'Roboto', sans-serif;
+            text-decoration: none;
+
+        }
+
+        .btn:hover {
+            background: #d1d3d4;
+            transition-duration: 80ms;
+        }
+
+        h3 {
+            color: #000;
+            text-align: left;
         }
     </style>
 </head>
 
 <body>
-    <a href="./luana/layoutInstrumentos-LuanaMozer/index.html">LuanaMozer Desktop</a>
-	<a href="./luana/responsivo-LuanaMozer/index.html">LuanaMozer mobile</a>
-	
-    <a href="./luiz/Vinci/Vinci/index.html">Luiz Desktop</a>
+
+    <div class="box">
+        <div class="container">
+            <main class="grid">
+             
+
+                <article>
+                    <div class="text">
+                        <h3>👋 Luana Mozer</h3>
+                        <p> Desafio Vinci </p>
+                        <a href="./luana/layoutInstrumentos-LuanaMozer/index.html" class="btn">Dektop</a>
+                        <a href="./luana/responsivo-LuanaMozer/index.html" class="btn">Mobile</a>
+                    </div>
+                </article>
+
+
+                <article>
+                    <div class="text">
+                        <h3>👋 Luiz</h3>
+                        <p> Desafio Vinci </p>
+                        <a href="../luiz/Vinci/Vinci/index.html" class="btn">Dektop</a>
+                        <!--<a href="./luana/responsivo-LuanaMozer/index.html" class="btn">Mobile</a> -->
+                    </div>
+                </article>
+
+
+
+                <article>
+                    <div class="text">
+                        <h3>👋 Caio</h3>
+                        <p> Desafio Vinci </p>
+                        <a href="" class="btn"> Aguardando Arquivo</a>
+                    </div>
+                </article>
+
+              
+               
+
+            </main>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
 </body>
 
 </html>
