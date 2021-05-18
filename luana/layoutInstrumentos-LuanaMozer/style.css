@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  height: 100vh;
+}
+
+.topo {
+  background: #fa883c;
+  height: 3vh;
+}
+
+header {
+  background: #f7f7f7;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  border-bottom: 1px solid #fa883c;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav a {
+  text-decoration: none;
+  color: #fa883c;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.nav a:hover {
+  border-bottom: 3px solid #ccc;
+  transition: 0.3ms;
+}
+
+main {
+  background: white;
+
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.select {
+  display: flex;
+  justify-content: flex-end;
+  padding: 4px;
+  background: white;
+  margin-bottom: 10px;
+  overflow: hidden;
+  border: 0;
+
+  appearance: none;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 15vh 135vh 5vh;
+
+  row-gap: 20px;
+  column-gap: 20px;
+}
+
+.guitarras {
+  display: grid;
+  grid-template-columns: 130px 130px 130px;
+  grid-template-rows: 210px 230px 210px;
+
+  row-gap: 55px;
+  column-gap: 5px;
+  justify-content: space-around;
+}
+.guitarra {
+  text-align: center;
+  font-size: 0.7rem;
+  line-height: 1.3rem;
+  text-transform: uppercase;
+}
+button {
+  margin-top: 10px;
+
+  background: #fa883c;
+  color: white;
+  padding: 7%;
+  border: 0px;
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+aside {
+  background: white;
+
+  grid-column-start: 1;
+  grid-column-end: 2;
+
+  text-align: center;
+}
+
+.titulo {
+  font-weight: 500;
+}
+.filtros {
+  display: flex;
+  flex-direction: column;
+  line-height: 1rem;
+  text-align: initial;
+  margin-left: 20px;
+}
+.filtros > div {
+  margin-top: 15px;
+}
+.filtros a {
+  font-size: 12px;
+  color: gray;
+  margin-left: 45px;
+}
+.filtros h5 {
+  margin-top: 10px;
+  margin-left: 45px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+footer {
+  background: #fa883c;
+
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+  color: white;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+}
+
+/* CHECKBOX*/
+
+.checks {
+  display: block;
+  position: relative;
+  padding-left: 45px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.checks input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkStyle {
+  left: 190px;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  background: white;
+  border: 1px solid gray;
+  position: absolute;
+}
+.checks input:checked ~ .checkStyle {
+  background: #fa883c;
+}
+
+.checkStyle::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.checks input:checked ~ .checkStyle::after {
+  display: block;
+}

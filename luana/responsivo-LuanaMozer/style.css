@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+.topo {
+  background: #fa883c;
+  height: 3vh;
+}
+
+header {
+  background: #f7f7f7;
+  border-bottom: 1px solid #fa883c;
+}
+
+.nav {
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+}
+.nav a {
+  text-decoration: none;
+  color: #fa883c;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.nav a:hover {
+  border-bottom: 3px solid #ccc;
+  transition: 0.3ms;
+}
+
+main {
+  background: white;
+}
+.select {
+  display: flex;
+  justify-content: flex-end;
+  padding: 4px;
+  background: white;
+  margin-bottom: 10px;
+  overflow: hidden;
+  border: 0;
+
+  appearance: none;
+}
+.container {
+  display: grid;
+  padding: 0 20px 0 20px;
+  margin: 0 auto;
+
+  grid-template-areas:
+    "aside main main"
+    "aside main main"
+    "aside main main"
+    "footer footer footer ";
+
+  row-gap: 50px;
+}
+
+.guitarras {
+  min-width: 250px;
+  display: grid;
+  grid-template-columns: 130px 130px 130px;
+
+  row-gap: 55px;
+  column-gap: 4rem;
+  justify-content: space-around;
+  grid-area: "main";
+}
+.guitarra {
+  max-width: 300px;
+  min-width: 200px;
+  text-align: center;
+  font-size: 0.7rem;
+  line-height: 1.3rem;
+  text-transform: uppercase;
+}
+button {
+  margin-top: 10px;
+
+  background: #fa883c;
+  color: white;
+  padding: 7%;
+  border: 0px;
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+aside {
+  max-width: 300px;
+  min-width: 250px;
+
+  background: white;
+
+  grid-column-start: 1;
+  grid-column-end: 2;
+
+  text-align: center;
+
+  grid-area: "aside";
+  grid-row: aside;
+}
+
+.titulo {
+  font-weight: 500;
+}
+.filtros {
+  display: flex;
+  flex-direction: column;
+  line-height: 1rem;
+  text-align: initial;
+  margin-left: 20px;
+}
+.filtros > div {
+  margin-top: 15px;
+}
+.filtros a {
+  font-size: 12px;
+  color: gray;
+  margin-left: 45px;
+}
+.filtros h5 {
+  margin-top: 10px;
+  margin-left: 45px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+footer {
+  background: #fa883c;
+  height: 3vh;
+
+  color: white;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+
+  grid-column: footer;
+  grid-area: "footer";
+}
+
+/* CHECKBOX*/
+
+.checks {
+  display: block;
+  position: relative;
+  padding-left: 45px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.checks input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkStyle {
+  left: 190px;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  background: white;
+  border: 1px solid gray;
+  position: absolute;
+}
+.checks input:checked ~ .checkStyle {
+  background: #fa883c;
+}
+
+.checkStyle::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.checks input:checked ~ .checkStyle::after {
+  display: block;
+}
+
+@media screen and (max-width: 820px) {
+  .guitarras {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .guitarras {
+    width: 100%;
+  }
+  .nav {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .guitarras {
+    width: 50%;
+  }
+  button {
+    width: 50%;
+  }
+  .select {
+    justify-content: center;
+  }
+}
